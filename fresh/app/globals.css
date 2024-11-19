@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.subTitle {
+  text-align : center;
+}
+
+.food {
+  margin: 20px auto;
+  width: 200px;
+  background: #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.cartItem {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  line-height: 0px;
+} 
+
+.navbar {
+  background: #ddd;
+  padding: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.event {
+  text-align: center;
+}
+
+.foodImg {
+  width: 100%;
+  height: auto;
+}
