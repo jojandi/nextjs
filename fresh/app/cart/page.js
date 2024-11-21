@@ -1,21 +1,32 @@
-import Link from "next/link"
 
 export default function Cart() {
-
-    return (
-      <div>
-        <h4 className="title">장바구니</h4>
-        <div className="cartItem">
-          <p>상품명</p>
-          <p>$40</p>
-          <p>1개</p>
-        </div>
-        <div className="cartItem">
-          <p>상품명</p>
-          <p>$40</p>
-          <p>1개</p>
-        </div>
-      </div>
-    );
-  }
+  let 장바구니 = ['Tomatoes', 'Pasta']
+  return (
+    <div>
+      <h4 className="title">장바구니</h4>
+      <CartItem item={장바구니[0]}/>
+      <CartItem item={장바구니[1]}/>
+      <Banner content="롯데카드"/>
+      <Banner content="현대카드"/>
+      <Button color="blue"/>
+    </div>
+  );
+}
   
+function Banner(props){
+  return <h5 className="banner">{props.content} 결제 행사 중</h5>
+}
+
+function CartItem(props){
+  return(
+    <div className="cartItem">
+      <p>{props.item}</p>
+      <p>$40</p>
+      <p>1개</p>
+    </div>
+  )
+}
+  
+function Button(props){
+  return <input type="button" value="버튼" style={{ background: `${props.color}`}}></input>
+}
